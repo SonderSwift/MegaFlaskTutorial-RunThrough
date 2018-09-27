@@ -14,7 +14,7 @@ Getting this Repo Running
 	+ ```(venv) $ source venv/bin/activate```
 	+ ```(venv) $ pip install -r requirements.txt```
 6. Run Flask App
-	+ ```(venv) $ flask run```
+	+ ```(venv) $ FLASK_APP=microblog.py flask run```
 
 Chapters
 1. Set up file structure for a starter flask project.
