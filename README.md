@@ -16,7 +16,7 @@ Getting this Repo Running
 		+ In case pip install fails, try installing 2 packages manually.
 		+ ```pip install flask flask_wtf```
 6. Run Flask App
-	+ ```(venv) $ flask run```
+	+ ```(venv) $ FLASK_APP=microblog.py flask run```
 
 Chapters
 1. Set up file structure for a starter flask project.
