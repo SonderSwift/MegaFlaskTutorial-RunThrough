@@ -13,6 +13,8 @@ Getting this Repo Running
 5. Install this project's dependencies to the virtualenvironment
 	+ ```(venv) $ source venv/bin/activate```
 	+ ```(venv) $ pip install -r requirements.txt```
+		+ In case pip install fails, try installing 2 packages manually.
+		+ ```pip install flask flask_wtf```
 6. Run Flask App
 	+ ```(venv) $ flask run```
 
