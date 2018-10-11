@@ -9,7 +9,7 @@ LoginForm: login class
 from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app.forms import LoginForm
-from random import randrange
+from random import randrange, seed
 
 @app.route('/')
 @app.route('/index')
@@ -52,6 +52,7 @@ def rn():
         To read the json body on non-GET requests
             request.data
     """
-    mn = int(request.args.get('min'))
-    mx = int(request.args.get('max'))
+    print request.data
+    mn = int(request.args.get('min', 0))
+    mx = int(request.args.get('max', 1000))
     return "Your random number: " + str(randrange(mn, mx))
