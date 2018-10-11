@@ -6,7 +6,7 @@ app: flask App instantiated in __init__
 LoginForm: login class
 """
 
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, request
 from app import app
 from app.forms import LoginForm
 from random import randrange
@@ -45,8 +45,13 @@ def login():
 
 @app.route('/random', methods=['GET', 'POST'])
 def rn():
-    return str(randrange(1000))
-
-
-
-
+    """
+        To read the query string parameters
+            request.args
+            request.query_string
+        To read the json body on non-GET requests
+            request.data
+    """
+    mn = int(request.args.get('min'))
+    mx = int(request.args.get('max'))
+    return "Your random number: " + str(randrange(mn, mx))
