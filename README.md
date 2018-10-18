@@ -23,7 +23,7 @@ Chapters
 2. Learn about frontend templating (Jinja2 template engine).
 3. Separate configuration to config.py. Use wtforms and flask-WTF for form submission.
 4.
-5.
+5. Making more stuff
 6.
 7.
 8.
