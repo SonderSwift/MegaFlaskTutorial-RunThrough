@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Press for Random Number</h3>
+    <h1>{{ number }}</h1>
+    <form action="" method="post" novalidate>
+        <p>
+            {{ form.minimum.label }}<br>
+            {{ form.minimum }}<br>
+            {% for error in form.minimum.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.maximum.label }}<br>
+            {{ form.maximum }}<br>
+            {% for error in form.maximum.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
