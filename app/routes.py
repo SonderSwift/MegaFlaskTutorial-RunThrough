@@ -52,8 +52,12 @@ def rn():
         To read the json body on non-GET requests
             request.data
     """
-    if request.data.get('seed', None):
-        seed(request.data['seed'])
+    # print(request['REQUEST_METHOD'])
+    # request.environ['REQUEST_METHOD'] == "POST"
+    if request.data:
+        print request.get_json()
+        print('Is post request')
+        # seed(request.data['seed'])
     mn = int(request.args.get('min', 0))
     mx = int(request.args.get('max', 1000))
     return "Your random number: " + str(randrange(mn, mx))
