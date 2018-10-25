@@ -38,3 +38,32 @@ def login():
         # navigate to index page
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+
+
+@app.route('/random', methods=['GET', 'POST'])
+def rn():
+    """
+        To read the query string parameters
+            request.args
+            request.query_string
+        To read the json body on non-GET requests
+            request.data
+    """
+    # print(request['REQUEST_METHOD'])
+    # request.environ['REQUEST_METHOD'] == "POST"
+    if request.data:
+        #print
+        print request.get_json()
+        #print
+        print('Is post request')
+        # seed(request.data['seed'])
+    mn = int(request.args.get('min', 0))
+    mx = int(request.args.get('max', 1000))
+    return "Your random number: " + str(randrange(mn, mx))
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
