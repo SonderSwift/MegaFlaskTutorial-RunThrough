@@ -58,6 +58,7 @@ def rn():
     # print(request['REQUEST_METHOD'])
     # request.environ['REQUEST_METHOD'] == "POST"
     if request.data:
+        #print
         print request.get_json()
         print('Is post request')
         # seed(request.data['seed'])
