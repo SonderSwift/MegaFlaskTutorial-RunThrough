@@ -22,6 +22,10 @@ def index():
         {
             'author': {'username': 'Susan'},
             'body': 'The Avengers movie was so cool!'
+        },
+        {
+            'author': {'username': 'Jill'},
+            'body': 'Where is my cookie?'
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
@@ -38,3 +42,27 @@ def login():
         # navigate to index page
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
+<<<<<<< Updated upstream
+=======
+
+
+@app.route('/random', methods=['GET', 'POST'])
+def rn():
+    """
+        To read the query string parameters
+            request.args
+            request.query_string
+        To read the json body on non-GET requests
+            request.data
+    """
+    # print(request['REQUEST_METHOD'])
+    # request.environ['REQUEST_METHOD'] == "POST"
+    if request.data:
+        print request.get_json()
+        print('Is post request')
+        # seed(request.data['seed'])
+    mn = int(request.args.get('min', 0))
+    mx = int(request.args.get('max', 1000))
+    return "Your random number: " + str(randrange(mn, mx))
+
+>>>>>>> Stashed changes
