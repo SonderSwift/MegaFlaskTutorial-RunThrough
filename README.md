@@ -22,7 +22,7 @@ Chapters
 1. Set up file structure for a starter flask project.
 2. Learn about frontend templating (Jinja2 template engine).
 3. Separate configuration to config.py. Use wtforms and flask-WTF for form submission.
-4.
+4. set up SQLite with SQLAlchemy
 5.
 6.
 7.
